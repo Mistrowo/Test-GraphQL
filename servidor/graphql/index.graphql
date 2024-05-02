@@ -1,0 +1,19 @@
+type Article {
+  title: String
+  author: User!
+  slug: String!
+  content: String!
+}
+
+type User {
+  name: String!
+  email: String!
+  articles: [Article]
+  id: String!
+}
+
+type Query {
+  users: [User]
+  user(id: String!): User!
+  articles: [Article]
+}
